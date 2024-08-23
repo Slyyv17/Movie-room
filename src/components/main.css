@@ -12,6 +12,7 @@
     --main-clr: #fff;
     --sec-clr: #000;
     --tet-clr: #333;
+    --back-clr: rgba(248, 248, 248, 0.961);
     --pry-ff: "Poppins", 
         sans-serif;
 }
@@ -21,13 +22,15 @@
     justify-content: space-between;
     align-items: flex-start; /* Align items to the top */
     height: 100vh; /* Full viewport height */
+    background-color: var(--back-clr);
 }
 
 .main-container .desktop {
     width: 100%;
     max-width: 10em; /* Adjust as needed */
     height: 100%;
-    border: 1px solid var(--main-clr);
+    border: 1px solid var(--back-clr);
+    background-color: var(--main-clr);
     display: flex;
     flex-direction: column;
     padding: 1em;
@@ -116,6 +119,8 @@
     width: 100%;
     max-width: 80%;
     padding: 1em;
-    border: 1px solid #000;
+    border: 1px solid var(--main-clr);
     height: fit-content;
+    background-color: var(--main-clr);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

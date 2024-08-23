@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaPlay, FaBookmark, FaSignOutAlt, FaCompactDisc } from 'react-icons/fa'
 import profPic from '../imgs/a5533d8ebbd6dd7e0da97214ea00f54e.jpg'
 import './main.css'
 
@@ -15,20 +14,20 @@ function Content() {
           <li><a href="/"> <span>Home</span> </a></li>
           
           <li>
-            <a href="/movies"> <span> Movies </span> <FaPlay /></a>
+            <a href="/movies"> <span> Movies </span> </a>
             <ul>
               <li><a href="/movies"><span>All Movies</span></a></li>
               <li><a href="/movies/top-rated"><span>Top Rated</span></a></li>
-              <li><a href="/movies/genres"><span>Genres</span> <FaCompactDisc /> </a></li>
+              <li><a href="/movies/genres"><span>Genres</span> </a></li>
             </ul>
           </li>
 
           <li>
-            <a href="/tv-shows">TV Shows <FaPlay /></a>
+            <a href="/tv-shows">TV Shows </a>
             <ul>
               <li><a href="/tv-shows"> <span>All Shows</span> </a></li>
               <li><a href="/tv-shows/popular"> <span>Popular</span> </a></li>
-              <li><a href="/tv-shows/genres"> <span>Genres</span> <FaCompactDisc /> </a></li>
+              <li><a href="/tv-shows/genres"> <span>Genres</span> </a></li>
             </ul>
           </li>
 
@@ -40,8 +39,8 @@ function Content() {
             <a href="/profile"> <span>Profile</span> </a>
             <ul>
               <li><a href="/profile/settings"><span>Acct Settings</span> </a></li>
-              <li><a href="/profile/watchlist"><span>Watch List</span> <FaBookmark /></a></li>
-              <li><a href="/logout"> <span>Logout</span> <FaSignOutAlt /> </a></li>
+              <li><a href="/profile/watchlist"><span>Watch List</span> </a></li>
+              <li><a href="/logout"> <span>Logout</span> </a></li>
             </ul>
           </li>
         </ul>
