@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import profPic from '../imgs/a5533d8ebbd6dd7e0da97214ea00f54e.jpg'
 import './main.css'
+import { FaSearch, FaPlay } from 'react-icons/fa'; 
 
 function Content() {
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
+
+  const openDialog = () => setIsDialogOpen(true);
+  const closeDialog = () => setIsDialogOpen(false);
   return (
         <section className='main-container'>
       {/* Sidebar Menu */}
@@ -32,7 +37,7 @@ function Content() {
           </li>
 
           <li>
-            <a href="/search">Search </a>
+            <a href="/search" onClick={openDialog}>Search </a>
           </li>
 
           <li>
@@ -48,7 +53,34 @@ function Content() {
 
       {/* Main Content */}
       <article>
-        {/* Add your main content here */}
+        {/* search bar */}
+        <div className="header">
+          <div className="logo-box">
+            <a href='/'> Movie-room </a>
+          </div>
+          <div className="search-box">
+          <input type="search" id="search-bar" placeholder='Search for Movies and Tv shows...' />
+          <button className='search-btn'> <FaSearch /> </button>
+        </div>
+        </div>
+
+        <div className="article">
+          <div className='sub-box'>
+          <p> Movie-room </p>
+          <h2> Unlimited <span>Movie</span>, Tv shows & more. </h2>
+          
+          <div className="semi-box">
+            <button> PG 18 </button>
+            <button> HD </button>
+            <p className="genre-type"> All Genre </p>
+            <p className="date"> 2024 </p>
+            <p className="time"> 120 mins </p>
+          </div>
+          <p> Watch anywhere. Cancel anytime. </p>
+
+          <button> <FaPlay /> <span>watch now</span> </button>
+        </div>
+        </div>
       </article>
     </section>
   )
